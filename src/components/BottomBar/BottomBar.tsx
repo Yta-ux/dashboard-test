@@ -1,4 +1,5 @@
 import { BottomContainer, Container, IconContainer } from "./style";
+import bar_chart from "../../assets/bar-chart.svg";
 
 interface BottomBarProps {
     className?: string;
@@ -13,7 +14,7 @@ export function BottomBar(props: BottomBarProps) {
             <Container>
                 <BottomContainer>
                     <IconContainer>
-                        <img src="../../../public/bar-chart.svg" alt="ícone de gráfico em barras azul" />
+                        <img src={bar_chart} alt="ícone de gráfico em barras azul" />
                     </IconContainer>
                 </BottomContainer>
             </Container>
