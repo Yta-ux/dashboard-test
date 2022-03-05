@@ -13,7 +13,7 @@ export function BottomBar(props: BottomBarProps) {
             <Container>
                 <BottomContainer>
                     <IconContainer>
-                        <img src="../../assets/bar-chart.svg" alt="ícone de gráfico em barras azul" />
+                        <img src="../../../src/assets/bar-chart.svg" alt="ícone de gráfico em barras azul" />
                     </IconContainer>
                 </BottomContainer>
             </Container>
