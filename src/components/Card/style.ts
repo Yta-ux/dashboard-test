@@ -37,44 +37,11 @@ export const Container = styled.div.attrs((props: ContainerProps) => ({
 `
 
 export const InspectContainer = styled(Container)`
-    max-height: 328px;
-    overflow-x: hidden;
-    overflow-y: auto;
     padding: 1.5rem 1.1rem 2.7rem 2.3rem;
-
-    &::-webkit-scrollbar {
-        width: 10px;
-    }
-
-    &::-webkit-scrollbar-track {
-        background: var(--bg-primary);
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: var(--text);
-        border: 4px solid var(--bg-primary);
-        border-radius: 20px;
-    }
 `
 
 export const PlanesContainer = styled(Container)`
-    max-height: 740px;
-    overflow-y: auto;
     padding: .7rem 1.4rem 3.8rem 1.1rem;
-
-    &::-webkit-scrollbar {
-        width: 10px;
-    }
-
-    &::-webkit-scrollbar-track {
-        background: var(--bg-primary);
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: var(--text);
-        border: 4px solid var(--bg-primary);
-        border-radius: 20px;
-    }
 `
 export const ChartContainer = styled(Container)`
     padding: 1rem 1.6rem 1.2rem;
@@ -144,7 +111,7 @@ export const Table = styled.table`
     line-height: 1.7rem;
 `
 
-export const LegendTable = styled.p`
+export const LegendTable = styled.legend`
     color: var(--description);
     font-size: 1rem;
     line-height: 1.5rem;
@@ -171,6 +138,27 @@ export const ChartSize = styled.div`
 `
 
 //  Card Inspect
+export const TableScroll = styled.div`
+    max-height: 190px;
+    width: 100% ;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--bg-primary);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--text);
+        border: 4px solid var(--bg-primary);
+        border-radius: 20px;
+    }
+`
+
 export const TableInspect = styled.table`
     line-height: 2.1rem;
     margin: 0 0 .2rem 1rem;
@@ -208,7 +196,7 @@ export const TableHead = styled.th`
 
     @media (min-width: 920px){
         &:first-child{
-            width: 70%;
+            width: 50%;
         }
 
         &:not(:first-child){
@@ -244,6 +232,22 @@ export const ContainerPlanes = styled.div`
 
 export const PlanesList = styled.ul`
     margin-top: 4rem;
+    max-height: 490px ;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--bg-primary);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--text);
+        border: 4px solid var(--bg-primary);
+        border-radius: 20px;
+    }
 `
 
 export const PlaneItem = styled.li`
