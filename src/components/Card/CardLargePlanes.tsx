@@ -29,7 +29,7 @@ export function CardLargePlanes(props: CardProps) {
                                         <PlaneResponse>{item.responsible}</PlaneResponse>
                                     </div>
                                     <div>
-                                        <PlaneStatus>
+                                        <PlaneStatus color={"var(--" + item.color + ")"}>
                                             <span>{item.status}</span>
                                         </PlaneStatus>
                                         <PlaneDate>{item.date}</PlaneDate>

@@ -11,5 +11,6 @@ export interface DataPlanesProps {
     name: string,
     responsible: string,
     status: string,
-    date: string
+    date: string,
+    color: string
 }

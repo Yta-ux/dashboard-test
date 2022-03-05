@@ -1,8 +1,7 @@
-import { formatPlanes, formatInspects } from "../../data/formatDatas";
 import { CardProps } from "../../types/CardProps";
 import { BarChart } from "../Chart/BarChart";
 import { HeaderLargeIcon } from "../Header/HeaderLargeIcon";
-import { dataBar } from '../../data/data'
+import { dataBar } from '../../data/dataBar'
 import { ChartWrapper, ChartSize, ContainerLegends, ListLegends, IconLegend, LegendItem, ChartContainer } from "./style";
 
 export function CardLargeChart(props: CardProps) {

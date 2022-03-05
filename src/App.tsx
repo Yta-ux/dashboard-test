@@ -20,7 +20,7 @@ export function App() {
             <Card className="card" title="Plano de ação" description="visão geral" infos={false} details={false} height="100%" />
             <Card className="card" title="Inspeções" description="status do dia" infos={true} height="100%" type="inspect" displayLegend="0"/>
             <Card className="card" title="Plano de ação" description="status do dia" infos={true} details={true} type="plane" displayLegend="1"/>
-            <CardLargePlanes className="card" title="Planos de ação" description="atualizações" height="100%" />
+            <CardLargePlanes className="card" title="Planos de ação" description="atualizações" />
             <CardLargeInspect className="card" title="Inspeções agendadas" />
           </div>
         </Wrapper>

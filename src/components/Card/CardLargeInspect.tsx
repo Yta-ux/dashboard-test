@@ -27,8 +27,9 @@ export function CardLargeInspect(props: CardProps) {
                                 return (
                                     <tr>
                                         <DataInspect>{item.name}</DataInspect>
-                                        <DataInspect>{item.planned}</DataInspect>
-                                        <DataInspect>{item.completed}</DataInspect>
+                                        
+                                        <DataInspect>{item.planned || "-"}</DataInspect>
+                                        <DataInspect>{item.completed || "-"}</DataInspect>
                                         <DataInspect>{item.date}</DataInspect>
                                     </tr>
                                 )

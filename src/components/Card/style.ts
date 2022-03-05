@@ -18,6 +18,10 @@ interface CardInfosDetailsProps {
     show: boolean;
 }
 
+interface PlaneStatusProps{
+    color: string;
+}
+
 // Card Geral
 export const Container = styled.div.attrs((props: ContainerProps) => ({
     width: props.width,
@@ -34,10 +38,43 @@ export const Container = styled.div.attrs((props: ContainerProps) => ({
 
 export const InspectContainer = styled(Container)`
     padding: 1.5rem 1.1rem 2.7rem 2.3rem;
+    height: 328px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--bg-primary);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--text);
+        border-radius: 20px;
+        border: 4px solid var(--bg-primary);
+    }
 `
 
 export const PlanesContainer = styled(Container)`
     padding: .7rem 1.4rem 3.8rem 1.1rem;
+    height: 740px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--bg-primary);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--text);
+        border-radius: 20px;
+        border: 4px solid var(--bg-primary);
+    }
 `
 export const ChartContainer = styled(Container)`
     padding: 1rem 1.6rem 1.2rem;
@@ -232,11 +269,13 @@ export const PlaneResponse = styled.p`
     font-size: 1.2rem;
 `
 
-export const PlaneStatus = styled.div`
+export const PlaneStatus = styled.div.attrs((props: PlaneStatusProps) => {
+    color: props.color;
+})<PlaneStatusProps>`
     align-items: center;
-    border: 1px solid var(--green);
+    border: 1px solid ${props => props.color};
     border-radius: 100px;
-    color: var(--green);
+    color: ${props => props.color};
     display: flex;
     font-size: .6rem;
     font-weight: 700;

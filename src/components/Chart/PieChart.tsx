@@ -1,7 +1,7 @@
 import { ResponsivePie } from "@nivo/pie";
 
 interface PieChartProps {
-    data: { id: string, label: string, value: number }[],
+    data: { id: string, label: string, value: string }[],
     type?: string
 }
 

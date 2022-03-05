@@ -1,25 +1,25 @@
 import { CardProps } from '../../types/CardProps'
 import { PieChart } from '../Chart/PieChart'
 import { Header } from '../Header/Header'
-import { dataPie } from '../../data/data'
+import { dataPieInspect, dataPiePlanes } from '../../data/dataPie'
 import { Container, ListLegends, IconLegend, ChartWrapper, ChartSize, InfosContainer, Table, LegendTable, Details, LegendItem } from './style'
 
 interface OptionsLegendProps {
-    item: {color: string, label: string,}
+    item: { color: string, label: string, }
 }
 
 export function Card(props: CardProps) {
 
     const optionsLegends = [
         [
-            {color: "var(--green)", label: "Realizada"},
-            {color: "var(--yellow)", label: "Em aberto"},
-            {color: "var(--red)", label: "Não realizada"}
+            { color: "var(--green)", label: "Realizada" },
+            { color: "var(--yellow)", label: "Em aberto" },
+            { color: "var(--red)", label: "Não realizada" }
         ],
         [
-            {color: "var(--green)", label: "Criada"},
-            {color: "var(--yellow)", label: "Finalizada"},
-            {color: "var(--red)", label: "Em aberto"}
+            { color: "var(--green)", label: "Criada" },
+            { color: "var(--yellow)", label: "Finalizada" },
+            { color: "var(--red)", label: "Em aberto" }
         ]
     ]
 
@@ -32,7 +32,9 @@ export function Card(props: CardProps) {
 
                 <ChartWrapper>
                     <ChartSize>
-                        <PieChart data={dataPie} type={props.type}/>
+                        {
+                            props.type === "inspect" ? <PieChart data={dataPieInspect} />: <PieChart data={dataPiePlanes} />
+                        }
                     </ChartSize>
                 </ChartWrapper>
 
@@ -40,15 +42,15 @@ export function Card(props: CardProps) {
                     <ListLegends column={true} gap=".7rem">
                         {
                             !isNaN(displayOptions) ?
-                            optionsLegends[displayOptions].map((item , index) => {
-                                return (
-                                    <LegendItem key={index}>
-                                        <IconLegend color={item.color} />
-                                        <p>{item.label}</p>
-                                    </LegendItem>
-                                )
-                            })
-                            : ""
+                                optionsLegends[displayOptions].map((item, index) => {
+                                    return (
+                                        <LegendItem key={index}>
+                                            <IconLegend color={item.color} />
+                                            <p>{item.label}</p>
+                                        </LegendItem>
+                                    )
+                                })
+                                : ""
                         }
                     </ListLegends>
                     <Table>
