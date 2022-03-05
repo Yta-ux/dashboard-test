@@ -38,7 +38,7 @@ export const Container = styled.div.attrs((props: ContainerProps) => ({
 
 export const InspectContainer = styled(Container)`
     padding: 1.5rem 1.1rem 2.7rem 2.3rem;
-    height: 328px;
+    max-height: 328px;
     overflow-x: hidden;
     overflow-y: auto;
 
@@ -59,7 +59,7 @@ export const InspectContainer = styled(Container)`
 
 export const PlanesContainer = styled(Container)`
     padding: .7rem 1.4rem 3.8rem 1.1rem;
-    height: 740px;
+    max-height: 740px;
     overflow-y: auto;
 
     &::-webkit-scrollbar {
