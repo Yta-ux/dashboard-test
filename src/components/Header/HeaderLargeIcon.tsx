@@ -2,9 +2,9 @@ import { HeaderProps } from "../../types/HeaderProps";
 import { MiniSelect } from "../Select/MiniSelect";
 import { Select } from "../Select/Select";
 import { ContainerLarge, IconSettings, Title, WrapperLargeIcon } from "./style";
+import settings from "../../assets/settings.svg";
 
 export function HeaderLargeIcon(props: HeaderProps) {
-    const pathImage = '../../../assets/'
     return (
         <div>
             <ContainerLarge>
@@ -12,7 +12,7 @@ export function HeaderLargeIcon(props: HeaderProps) {
                 <WrapperLargeIcon>
                     <Select className="select" displayOptions={0} />
                     <MiniSelect className="mini-select" />
-                    <IconSettings src={pathImage + "settings.svg"} alt="ícone de uma engrenagem de cor preta" className="settings" />
+                    <IconSettings src={settings} alt="ícone de uma engrenagem de cor preta" className="settings" />
                 </WrapperLargeIcon>
             </ContainerLarge>
         </div>

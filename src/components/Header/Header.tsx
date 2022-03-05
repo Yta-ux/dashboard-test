@@ -1,10 +1,10 @@
 import { HeaderProps } from "../../types/HeaderProps";
 import { Container, Description, IconSettings, Title } from "./style";
+import settings from "../../assets/settings.svg";
 
 
 export function Header(props: HeaderProps) {
 
-    const pathImage = '../../../assets/'
     return (
         <div>
             <Container>
@@ -12,7 +12,7 @@ export function Header(props: HeaderProps) {
                     <Title>{props.title}</Title>
                     <Description>{props.description}</Description>
                 </div>
-                <IconSettings src={pathImage + "settings.svg"} alt="ícone de uma engrenagem de cor preta" />
+                <IconSettings src={settings} alt="ícone de uma engrenagem de cor preta" />
             </Container>
         </div>
     )

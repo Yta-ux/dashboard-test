@@ -2,9 +2,10 @@ import { useState } from "react";
 import { SelectProps } from "../../types/SelectProps";
 import { ListOptions } from "./ListOptions";
 import { Container, OptionsContainer, Selected } from "./style";
+import chevron from "../../assets/chevron-down.svg";
+
 
 export function Select(props: SelectProps) {
-    const pathImage = '../../../assets/'
     const [isOptions, setIsOptions] = useState(false)
     const [titleSelect, setTitleSelect] = useState("Selecione uma opção")
 
@@ -49,7 +50,7 @@ export function Select(props: SelectProps) {
 
                 <Selected active={isOptions} onClick={handleClick} width="244px">
                     <p>{titleSelect}</p>
-                    <img src={pathImage + "chevron-down.svg"} />
+                    <img src={chevron} alt="seta para baixo" />
                 </Selected>
             </Container>
         </div>

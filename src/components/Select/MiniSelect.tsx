@@ -2,6 +2,7 @@ import { useState } from "react";
 import { SelectProps } from "../../types/SelectProps";
 import { ListOptions } from "./ListOptions";
 import { Container, MiniOptionsContainer, MiniSelected } from "./style";
+import chevron from "../../assets/chevron-down.svg";
 
 interface Item {
     id: string,
@@ -9,7 +10,6 @@ interface Item {
 }
 
 export function MiniSelect(props: SelectProps) {
-    const pathImage = '../../../assets/'
     const [isOptions, setIsOptions] = useState(false)
     const [titleSelect, setTitleSelect] = useState()
 
@@ -43,7 +43,7 @@ export function MiniSelect(props: SelectProps) {
                 </MiniOptionsContainer>
 
                 <MiniSelected active={isOptions} onClick={handleClick} width="34px">
-                    <img src={pathImage + "chevron-down.svg"} />
+                    <img src={chevron} alt="seta para baixo" />
                 </MiniSelected>
             </Container>
         </div>
