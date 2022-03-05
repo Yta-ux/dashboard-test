@@ -2,7 +2,6 @@ import { useFetch } from "../../hooks/useFetch";
 import { CardProps } from "../../types/CardProps";
 import { DataPlanesProps } from "../../types/DataProps";
 import { Header } from "../Header/Header";
-import { ContainerLarge } from "../Header/style";
 import { SearchBar } from "../SearchBar/SearchBar";
 import { Select } from "../Select/Select";
 import { ContainerPlanes, PlaneName, PlaneResponse, PlaneStatus, PlaneDate, PlanesList, PlaneItem, PlanesContainer } from "./style";

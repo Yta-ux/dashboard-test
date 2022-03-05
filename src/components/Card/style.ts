@@ -37,10 +37,10 @@ export const Container = styled.div.attrs((props: ContainerProps) => ({
 `
 
 export const InspectContainer = styled(Container)`
-    padding: 1.5rem 1.1rem 2.7rem 2.3rem;
     max-height: 328px;
     overflow-x: hidden;
     overflow-y: auto;
+    padding: 1.5rem 1.1rem 2.7rem 2.3rem;
 
     &::-webkit-scrollbar {
         width: 10px;
@@ -52,15 +52,15 @@ export const InspectContainer = styled(Container)`
 
     &::-webkit-scrollbar-thumb {
         background-color: var(--text);
-        border-radius: 20px;
         border: 4px solid var(--bg-primary);
+        border-radius: 20px;
     }
 `
 
 export const PlanesContainer = styled(Container)`
-    padding: .7rem 1.4rem 3.8rem 1.1rem;
     max-height: 740px;
     overflow-y: auto;
+    padding: .7rem 1.4rem 3.8rem 1.1rem;
 
     &::-webkit-scrollbar {
         width: 10px;
@@ -72,8 +72,8 @@ export const PlanesContainer = styled(Container)`
 
     &::-webkit-scrollbar-thumb {
         background-color: var(--text);
-        border-radius: 20px;
         border: 4px solid var(--bg-primary);
+        border-radius: 20px;
     }
 `
 export const ChartContainer = styled(Container)`
@@ -84,7 +84,6 @@ export const ListLegends = styled.ul.attrs((props: ListLegendsProps) => ({
     column: props.column,
     gap: props.gap
 })) <ListLegendsProps>`
-    /* align-items: center; */
     display: flex;
     flex-direction: ${props => props.column ? 'column' : 'row'};
     gap: ${props => props.gap};

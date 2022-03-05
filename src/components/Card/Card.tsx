@@ -4,10 +4,6 @@ import { Header } from '../Header/Header'
 import { dataPieInspect, dataPiePlanes } from '../../data/dataPie'
 import { Container, ListLegends, IconLegend, ChartWrapper, ChartSize, InfosContainer, Table, LegendTable, Details, LegendItem } from './style'
 
-interface OptionsLegendProps {
-    item: { color: string, label: string, }
-}
-
 export function Card(props: CardProps) {
 
     const optionsLegends = [

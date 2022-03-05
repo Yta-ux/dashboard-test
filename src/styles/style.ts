@@ -29,7 +29,7 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
 
   @media (min-width: 0){
-    padding: 1rem 1.5rem 0;
+    padding: 1rem 1.5rem 9rem;
     width: 100%;
     
     .nameSection{
@@ -83,7 +83,7 @@ export const Wrapper = styled.div`
 }
 
   @media (min-width: 620px){
-
+    padding-bottom: 2rem;
     .nameSection{
         text-align: left;
     }

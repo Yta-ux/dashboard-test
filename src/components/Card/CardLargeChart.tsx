@@ -20,11 +20,11 @@ export function CardLargeChart(props: CardProps) {
                     <ListLegends gap="1.3rem">
                         <LegendItem>
                             <IconLegend color="var(--blue)" />
-                            <p>Atividades Realizadas</p>
+                            <p>Inspeções Realizadas</p>
                         </LegendItem>
                         <LegendItem>
                             <IconLegend color="var(--red-dark)" />
-                            <p>Atividades não realizadas</p>
+                            <p>Planos de ação criados</p>
                         </LegendItem>
                         <LegendItem>
                             <IconLegend color="var(--purple)" />
