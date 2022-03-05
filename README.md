@@ -62,3 +62,4 @@ Esse projeto possui licença MIT. Para mais detalhes consulte o arquivo [LICENSE
 - Nesse projeto existe 2 formas de mockar dados:
   - Diretamente no arquivo json, importando ele.
   - Usando json-server e axios para renderizar o conteúdo.
+- Para ter acesso ao projeto por completo, clone ele em sua máquina para acessar o servidor que funciona com "json-server". 
