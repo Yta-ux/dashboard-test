@@ -9,6 +9,7 @@ interface Item {
 }
 
 export function MiniSelect(props: SelectProps) {
+    const pathImage = '../../../assets/'
     const [isOptions, setIsOptions] = useState(false)
     const [titleSelect, setTitleSelect] = useState()
 
@@ -42,7 +43,7 @@ export function MiniSelect(props: SelectProps) {
                 </MiniOptionsContainer>
 
                 <MiniSelected active={isOptions} onClick={handleClick} width="34px">
-                    <img src="../../../src/images/chevron-down.svg" />
+                    <img src={pathImage + "chevron-down.svg"} />
                 </MiniSelected>
             </Container>
         </div>

@@ -5,14 +5,6 @@ import { CardLargeInspect } from './components/Card/CardLargeInspect';
 import { CardLargePlanes } from './components/Card/CardLargePlanes';
 import { Sidebar } from './components/Sidebar/Sidebar';
 import { BottomBar } from './components/BottomBar/BottomBar';
-import { useFetch } from './hooks/useFetch';
-
-interface Repository {
-  id: number,
-  name: string,
-  planned: number,
-  completed: number,
-}
 
 export function App() {
   return (

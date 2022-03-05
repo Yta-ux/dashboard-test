@@ -7,7 +7,7 @@ interface SidebarProps {
 
 export function Sidebar(props: SidebarProps) {
 
-    const pathImage = '../../../src/images/'
+    const pathImage = '../../../assets/'
 
     const [isActive, setIsActive] = useState(false)
 
