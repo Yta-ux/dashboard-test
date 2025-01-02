@@ -88,7 +88,7 @@ export const IconLegend = styled.div.attrs((props: IconLegendProps) => ({
 export const InfosContainer = styled.div.attrs(
   (props: CardInfosDetailsProps) => ({
     show: props.show,
-  })
+  }),
 )<CardInfosDetailsProps>`
   align-items: center;
   display: ${(props) => (props.show ? "flex" : "none")};

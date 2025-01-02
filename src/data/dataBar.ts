@@ -2,7 +2,7 @@ import server from "../../server.json";
 
 const created = server.planes.length;
 const realized = server.inspects.filter(
-  (item) => item.planned === item.completed && item.planned != ""
+  (item) => item.planned === item.completed && item.planned != "",
 ).length;
 const average = (created + realized) / 2;
 

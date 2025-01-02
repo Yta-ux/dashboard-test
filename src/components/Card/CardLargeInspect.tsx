@@ -13,7 +13,7 @@ import {
 
 export function CardLargeInspect(props: CardProps) {
   const { data } = useFetch<DataInspectProps[]>(
-    "http://localhost:3333/inspects"
+    "http://localhost:3333/inspects",
   );
 
   return (

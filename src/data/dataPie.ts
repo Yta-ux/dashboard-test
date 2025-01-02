@@ -1,13 +1,13 @@
 import server from "../../server.json";
 
 const completed = server.inspects.filter(
-  (item) => item.planned === item.completed && item.planned != ""
+  (item) => item.planned === item.completed && item.planned != "",
 ).length;
 const opened = server.inspects.filter(
-  (item) => Number(item.completed) < Number(item.planned)
+  (item) => Number(item.completed) < Number(item.planned),
 ).length;
 const notCompleted = server.inspects.filter(
-  (item) => item.planned == "" || Number(item.planned) === 0
+  (item) => item.planned == "" || Number(item.planned) === 0,
 ).length;
 const total = server.inspects.length;
 
@@ -37,10 +37,10 @@ export const dataPieInspect = [
 
 const created = server.planes.length;
 const finalized = server.planes.filter(
-  (item) => item.status === "Realizado"
+  (item) => item.status === "Realizado",
 ).length;
 const opening = server.planes.filter(
-  (item) => item.status === "Pendente"
+  (item) => item.status === "Pendente",
 ).length;
 
 const averageFinalized = (100 * finalized) / created;
