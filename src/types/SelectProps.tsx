@@ -1,4 +1,4 @@
 export interface SelectProps {
-    className?: string;
-    displayOptions?: number;
+  className?: string;
+  displayOptions?: number;
 }

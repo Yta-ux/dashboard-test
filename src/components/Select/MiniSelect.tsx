@@ -5,47 +5,45 @@ import { Container, MiniOptionsContainer, MiniSelected } from "./style";
 import chevron from "../../assets/chevron-down.svg";
 
 interface Item {
-    id: string,
-    value: string
+  id: string;
+  value: string;
 }
 
 export function MiniSelect(props: SelectProps) {
-    const [isOptions, setIsOptions] = useState(false)
-    const [titleSelect, setTitleSelect] = useState()
+  const [isOptions, setIsOptions] = useState(false);
+  const [titleSelect, setTitleSelect] = useState();
 
-    const options: Item[] = [
-        { id: "day", value: "Diário"}, 
-        { id: "week", value: "Semanal"},
-        { id: "month", value: "Mensal"},
-        { id: "year", value: "Anual"}
-    ]
+  const options: Item[] = [
+    { id: "day", value: "Diário" },
+    { id: "week", value: "Semanal" },
+    { id: "month", value: "Mensal" },
+    { id: "year", value: "Anual" },
+  ];
 
-    function handleClickOption(event: any) {
-        const value = event.target.children[1].innerHTML
+  function handleClickOption(event: any) {
+    const value = event.target.children[1].innerHTML;
 
-        setTitleSelect(value)
-        setIsOptions(false)
-    }
+    setTitleSelect(value);
+    setIsOptions(false);
+  }
 
-    function handleClick() {
-        setIsOptions(!isOptions)
-    }
+  function handleClick() {
+    setIsOptions(!isOptions);
+  }
 
-    return (
-        <div className={props.className}>
-            <Container>
-                <MiniOptionsContainer active={isOptions}>
-                    {
-                        options.map((item, index) => (
-                            <ListOptions key={index} item={item} action={handleClickOption}/>
-                        ))
-                    }
-                </MiniOptionsContainer>
+  return (
+    <div className={props.className}>
+      <Container>
+        <MiniOptionsContainer active={isOptions}>
+          {options.map((item, index) => (
+            <ListOptions key={index} item={item} action={handleClickOption} />
+          ))}
+        </MiniOptionsContainer>
 
-                <MiniSelected active={isOptions} onClick={handleClick} width="34px">
-                    <img src={chevron} alt="seta para baixo" />
-                </MiniSelected>
-            </Container>
-        </div>
-    )
+        <MiniSelected active={isOptions} onClick={handleClick} width="34px">
+          <img src={chevron} alt="seta para baixo" />
+        </MiniSelected>
+      </Container>
+    </div>
+  );
 }
