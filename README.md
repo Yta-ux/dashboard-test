@@ -12,7 +12,7 @@
 
 ## 🖥 Projeto
 
-O **Dashboard Teste** é um projeto desenvolvido como teste para estágio. Foram usadas abordagens diferentes no seu desenvolvimento, desde a renderização dos dados, até a criação de componentes. Usando como base o boilerplate gerado pelo Vite
+O **Dashboard Teste** é uma dashboard mockada. Foram usadas abordagens diferentes no seu desenvolvimento, desde a renderização dos dados, até a criação de componentes. Usando como base o boilerplate gerado pelo Vite
 
 ## 👨‍💻 Tecnologias
 
